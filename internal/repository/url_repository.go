@@ -1,9 +1,7 @@
 package repository
 
 import (
-	"database/sql"
 	"github.com/kabakadev/goshort/config"
-	"github.com/kabakadev/goshort/internal/model"
 )
 
 func SaveURL(shortCode string, originalURL string) error {
