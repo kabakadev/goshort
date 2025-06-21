@@ -4,11 +4,16 @@ import (
 	"log"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/kabakadev/goshort/config"
+
 )
 
 func main() {
 	// Step 1: Create a new Fiber app
 	app := fiber.New()
+	
+	config.InitDB()
+
 
 	// Step 2: Define a health check route
 	app.Get("/", func(c *fiber.Ctx) error {
